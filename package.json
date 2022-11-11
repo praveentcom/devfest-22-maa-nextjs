@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google-cloud/pubsub": "^3.2.1",
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
     "@types/node": "18.11.9",
