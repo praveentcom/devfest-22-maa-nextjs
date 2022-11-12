@@ -9,6 +9,7 @@ const AppStart: NextPage = () => {
     const [isApiCall, setIsApiCall] = useState<boolean>(false)
     const [isRequestSuccess, setIsRequestSuccess] = useState<boolean>(false)
     const [email, setEmail] = useState<string>('')
+    const [timeTaken, setTimeTaken] = useState<number>(0)
 
     async function sendAgenda(event: React.SyntheticEvent) {
         event.preventDefault()
@@ -19,11 +20,15 @@ const AppStart: NextPage = () => {
                 name: { value: string }
             }
             setEmail(target.email.value);
+            const startTime = new Date().getTime()
             try {
                 var response = await axios.post("/api/agendaRequest", {
                     email: target.email.value,
                     name: target.name.value,
                 })
+                const endTime = new Date().getTime()
+                const ms = endTime - startTime;
+                setTimeTaken(ms);
                 if (response.status === 200) {
                     setIsRequestSuccess(true);
                 }
@@ -63,10 +68,10 @@ const AppStart: NextPage = () => {
 
                     <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                         <div className="px-8 py-8 md:shadow sm:bg-white sm:rounded-lg sm:px-10">
-                            {   isRequestSuccess ? <div className="text-center flex justify-center items-center self-center">
-                                <CheckCircleIcon className="text-green-600 h-4 w-4 m-0 p-0" />
-                                <p className="text-sm pl-1 font-medium text-gray-600">
-                                    Agenda will be sent shortly to {email}
+                            {   isRequestSuccess ? <div className="items-center self-center justify-center text-center">
+                                <CheckCircleIcon className="w-6 h-6 p-0 m-auto text-green-600" />
+                                <p className="mt-2 text-sm font-medium text-gray-600">
+                                    Sending email to {email}<br></br>Request processed in {timeTaken} ms ({(timeTaken / 1000).toFixed(1)} seconds)
                                 </p>
                             </div>
                             :   <form
