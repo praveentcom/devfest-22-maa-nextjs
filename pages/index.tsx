@@ -20,14 +20,13 @@ const AppStart: NextPage = () => {
                 name: { value: string }
             }
             setEmail(target.email.value);
-            const startTime = new Date().getTime()
             try {
+                const startTime = new Date().getTime()
                 var response = await axios.post("/api/agendaRequest", {
                     email: target.email.value,
                     name: target.name.value,
                 })
-                const endTime = new Date().getTime()
-                const ms = endTime - startTime;
+                const ms = new Date().getTime() - startTime;
                 setTimeTaken(ms);
                 if (response.status === 200) {
                     setIsRequestSuccess(true);
