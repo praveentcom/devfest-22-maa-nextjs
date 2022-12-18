@@ -59,7 +59,7 @@ const HeaderSection: NextPage = () => {
                             <div className="cursor-pointer contents">
                                 <span className="sr-only">DevFest Logo</span>
                                 <Image
-                                    src={`/devfest-chennai.svg`}
+                                    src={`/devfest-goa.svg`}
                                     height={74}
                                     width={200}
                                     alt="Logo"

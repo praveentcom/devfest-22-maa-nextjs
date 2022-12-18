@@ -45,7 +45,7 @@ const AppStart: NextPage = () => {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <title>DevFest Chennai 2022</title>
+                <title>DevFest Goa 2022</title>
                 <link
                     rel="icon"
                     type="image/png"
@@ -58,10 +58,10 @@ const AppStart: NextPage = () => {
                 <div className="flex flex-col justify-center min-h-full py-12 sm:px-6 lg:px-8">
                     <div className="sm:mx-auto sm:w-full sm:max-w-md">
                         <h2 className="mt-4 text-2xl font-bold tracking-tight text-center text-gray-900">
-                            வணக்கம் சென்னை!
+                            हैलो, गोवा!
                         </h2>
                         <p className="mt-2 mb-4 text-sm text-center text-gray-600">
-                            Get the agenda for GDG Chennai DevFest 2022
+                            Get the agenda for DevFest Goa 2022
                         </p>
                     </div>
 

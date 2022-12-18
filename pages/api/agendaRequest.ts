@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             }
         });
     
-        await pubSubClient.topic('projects/ccd-2022/topics/df-maa-22-demo').publish(Buffer.from(JSON.stringify({})), {
+        await pubSubClient.topic('projects/ccd-2022/topics/df-goa-22-demo').publish(Buffer.from(JSON.stringify({})), {
             name: req.body.name,
             email: req.body.email,
         });
