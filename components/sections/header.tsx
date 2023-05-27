@@ -1,48 +1,8 @@
 import { Popover, Transition } from "@headlessui/react"
-import {
-    NewspaperIcon,
-} from "@heroicons/react/24/solid"
 import { NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { Fragment } from "react"
-
-const appNavigation = [
-    { name: "Dashboard", href: "/app" },
-    { name: "My Flights", href: "/app/flights" },
-    { name: "My Profile", href: "/app/profile" },
-]
-
-const policyDocsMap = [
-    {
-        name: "Privacy Policy",
-        description: "Last updated on September 24th, 2022.",
-        href: "/docs/privacy",
-        icon: NewspaperIcon,
-    },
-    {
-        name: "Terms of Service",
-        description: "Last updated on September 24th, 2022.",
-        href: "/docs/terms",
-        icon: NewspaperIcon,
-    },
-    {
-        name: "Cookie Policy",
-        description: "Last updated on September 24th, 2022.",
-        href: "/docs/cookie",
-        icon: NewspaperIcon,
-    },
-    {
-        name: "Acceptable Use Policy",
-        description: "Last updated on September 24th, 2022.",
-        href: "/docs/acceptable-use",
-        icon: NewspaperIcon,
-    },
-]
-
-function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(" ")
-}
 
 const HeaderSection: NextPage = () => {
 
@@ -57,9 +17,9 @@ const HeaderSection: NextPage = () => {
                             passHref
                             href={"/"}>
                             <div className="cursor-pointer contents">
-                                <span className="sr-only">DevFest Logo</span>
+                                <span className="sr-only">Logo</span>
                                 <Image
-                                    src={`/devfest-goa.svg`}
+                                    src={`/ccd.svg`}
                                     height={74}
                                     width={200}
                                     alt="Logo"
@@ -89,15 +49,6 @@ const HeaderSection: NextPage = () => {
                                     className="text-base font-medium text-gray-900 hover:text-gray-700">
                                     Contact
                                 </Link>
-                                {policyDocsMap.map((item) => (
-                                    <Link
-                                        key={item.name}
-                                        href={item.href}
-                                        target="_blank"
-                                        className="text-base font-medium text-gray-900 hover:text-gray-700">
-                                        {item.name}
-                                    </Link>
-                                ))}
                             </div>
                         </div>
                     </div>
