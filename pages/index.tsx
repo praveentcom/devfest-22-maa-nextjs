@@ -118,7 +118,7 @@ const AppStart: NextPage = () => {
                                     <button
                                         type="submit"
                                         className="flex justify-center w-full px-4 py-2 mt-8 text-sm font-medium text-white bg-blue-700 border border-transparent rounded-md shadow-sm hover:bg-blue-800 focus:outline-none">
-                                        Send me an email
+                                        Send an email
                                     </button>
                                 ) : (
                                     <button
