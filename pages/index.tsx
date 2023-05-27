@@ -17,7 +17,7 @@ const AppStart: NextPage = () => {
             setIsApiCall(true)
             const target = event.target as typeof event.target & {
                 email: { value: string }
-                name: { value: string }
+                name: { value: string } 
             }
             setEmail(target.email.value);
             try {
