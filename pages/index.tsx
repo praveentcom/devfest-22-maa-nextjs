@@ -22,7 +22,7 @@ const AppStart: NextPage = () => {
             setEmail(target.email.value);
             try {
                 const startTime = new Date().getTime()
-                var response = await axios.post("/api/agendaRequest", {
+                var response = await axios.post("/api/send-an-email", {
                     email: target.email.value,
                     name: target.name.value,
                 })
@@ -45,7 +45,7 @@ const AppStart: NextPage = () => {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <title>DevFest Goa 2022</title>
+                <title>CCD Pune 2023</title>
                 <link
                     rel="icon"
                     type="image/png"
@@ -58,10 +58,10 @@ const AppStart: NextPage = () => {
                 <div className="flex flex-col justify-center min-h-full py-12 sm:px-6 lg:px-8">
                     <div className="sm:mx-auto sm:w-full sm:max-w-md">
                         <h2 className="mt-4 text-2xl font-bold tracking-tight text-center text-gray-900">
-                            हैलो, गोवा!
+                            हैलो!
                         </h2>
                         <p className="mt-2 mb-4 text-sm text-center text-gray-600">
-                            Get the agenda for DevFest Goa 2022
+                            CCD Pune 2023
                         </p>
                     </div>
 
@@ -118,7 +118,7 @@ const AppStart: NextPage = () => {
                                     <button
                                         type="submit"
                                         className="flex justify-center w-full px-4 py-2 mt-8 text-sm font-medium text-white bg-blue-700 border border-transparent rounded-md shadow-sm hover:bg-blue-800 focus:outline-none">
-                                        Send me the agenda
+                                        Send me an email
                                     </button>
                                 ) : (
                                     <button
