@@ -14,6 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await pubSubClient.topic('projects/p26-playground/topics/send-an-email').publish(Buffer.from(JSON.stringify({})), {
             name: req.body.name,
             email: req.body.email,
+            firestoreEventId: "ccd-pune-2023",
         });
     
         res.status(200).send({});
