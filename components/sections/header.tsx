@@ -18,12 +18,6 @@ const HeaderSection: NextPage = () => {
                             href={"/"}>
                             <div className="cursor-pointer contents">
                                 <span className="sr-only">Logo</span>
-                                <Image
-                                    src={`/ccd.svg`}
-                                    height={74}
-                                    width={200}
-                                    alt="Logo"
-                                />
                             </div>
                         </Link>
                     </div>
